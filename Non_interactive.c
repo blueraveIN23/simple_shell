@@ -35,7 +35,6 @@ void non_interactive(__attribute__((unused)) char **env, char *fname, int c)
 			free(buff_h);
 			exit(0);
 		}
-		/* comment(arr); */
 		for (t = 0; arr[t] != NULL; t++)
 		{
 			temp = arr[t];
