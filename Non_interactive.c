@@ -1,7 +1,7 @@
-#include "main.h"
+#include "shell.h"
 
 /**
- * non_interactive - handles the non interactive aspect of the simple shell program.
+ * non_interactive - handles the non interactive aspect of the simple shell.
  * @env: environmental variables.
  * @fname:file name of program.
  * @c: command line count.

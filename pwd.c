@@ -1,18 +1,18 @@
+#include "shell.h"
+
 /**
  * cd - changes the pwd
- * av: argument vector
+ * @av: argument vector
  *
  * Return: 0 on success and 1 on failure
  */
-
-#include "main.h"
 
 int cd(char **av)
 {
 	char newDir[1024];
 	char *homeDir = getenv("HOME");
 	char *prevDir = NULL;
-	char *currentDir = getpwd(NULL, 0);
+	char *currentDir = getcwd(NULL, 0);
 	unsigned int len = 0;
 
 	while (av[len] != NULL)
