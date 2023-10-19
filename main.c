@@ -18,7 +18,7 @@ void handle_input(char **av, char *f_name, size_t count)
 		free_dp(av);
 }
 /**
- * interactive mode - function that display the interactive mode
+ * interactive_mode - function that display the interactive mode
  * @env: environment vector
  * @f_name: name of the file
  * Return: 0

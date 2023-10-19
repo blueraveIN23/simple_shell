@@ -56,11 +56,11 @@ char *_strdup(char *str)
 	char *copy;
 
 	int i;
-	
+
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; str [i] != '\0'; i++);
+	for (i = 0; str[i] != '\0'; i++)
 
 	copy = (char *) malloc((i + 1) * sizeof(char));
 
@@ -70,7 +70,7 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		copy[i] = str[i];
-	
+
 	copy[i] = '\0';
 
 	return (copy);
