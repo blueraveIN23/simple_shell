@@ -16,6 +16,7 @@
 #define HISTORY_COUNT 20
 #define MAX_CMD_LEN 128
 #define STAT_BUFF_SIZE 1024
+#define BUFFER_SIZE 1024
 
 /******* Function Prototypes *******/
 void file(char **av);
@@ -41,6 +42,7 @@ int check_betty(void);
 int main(int ac, char **av, char **env);
 void interactive_mode(char **env, char *f_name);
 void handle_input(char **av, char *f_name, size_t count);
+ssize_t my_getline(char **lineptr, size_t *n, FILE *stream);
 
 /**
  * struct list - environmental variables linked list
