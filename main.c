@@ -64,9 +64,15 @@ int main(int ac, char **av, char **env)
 {
 	char *f_name = av[0];
 
+	int count = 0;
+
 	signal(SIGINT, SIG_IGN);
 	if (ac > 1)
 		file(av);
+	else if (!isatty(STDIN_FILENO))
+	{
+		non_interactive(env, f_name, count);
+	}
 	else
 		interactive_mode(env, f_name);
 	return (0);
