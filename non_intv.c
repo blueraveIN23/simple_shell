@@ -12,7 +12,7 @@ void non_interactive(__attribute__((unused)) char **env, char *fname, int c)
 	char *buff = malloc(1024), *delim = "\n", **arr = NULL, **cmd = NULL;
 	char *temp = NULL, *buff_h;
 	ssize_t bytes_read;
-	int t;
+	int i;
 
 	if (buff == NULL)
 		exit(0);
@@ -35,9 +35,9 @@ void non_interactive(__attribute__((unused)) char **env, char *fname, int c)
 			free(buff_h);
 			exit(0);
 		}
-		for (t = 0; arr[t] != NULL; t++)
+		for (i = 0; arr[i] != NULL; i++)
 		{
-			temp = arr[t];
+			temp = arr[i];
 			cmd = str2arr(temp, " ");
 			getfunc(cmd, fname, c);
 			free_dp(cmd);
